@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RoadKill" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9E-rR-3cQ">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <state key="normal" title="share"/>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZl-c1-gej"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUr-Bm-25y">
+                                <rect key="frame" x="97" y="20" width="46" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="q3v-ox-0Og" kind="show" id="QO6-cI-VcZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--ShareAPIViewController-->
+        <scene sceneID="q9v-Dh-KNX">
+            <objects>
+                <tableViewController id="q3v-ox-0Og" customClass="ShareAPIViewController" customModule="RoadKill" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TS9-N8-IU6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.92941176889999999" blue="0.99607843159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="Vq8-Cb-gxh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="922-dj-Yn0">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="922-dj-Yn0" id="Ga2-we-ffI">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLN-jC-YU1">
+                                                    <rect key="frame" x="537" y="24" width="35" height="30"/>
+                                                    <state key="normal" title="Try it"/>
+                                                    <connections>
+                                                        <action selector="shareLink" destination="q3v-ox-0Og" eventType="touchUpInside" id="gHT-jQ-Ihp"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnm-5y-LZw">
+                                                    <rect key="frame" x="28" y="28" width="81" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.21176470820000001" green="0.40784314269999999" blue="0.98823529480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twe-ZQ-gP2">
+                                                    <rect key="frame" x="28" y="59" width="348" height="32"/>
+                                                    <string key="text">Shares a link programmatically via Share API.
+Access token with publish_actions permission is required.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.21176470820000001" green="0.40784314269999999" blue="0.98823529480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.92941176889999999" blue="0.99607843159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Twe-ZQ-gP2" firstAttribute="leading" secondItem="Jnm-5y-LZw" secondAttribute="leading" id="5Gm-J7-lIe"/>
+                                                <constraint firstItem="wLN-jC-YU1" firstAttribute="centerY" secondItem="Jnm-5y-LZw" secondAttribute="centerY" id="P6o-oD-ILi"/>
+                                                <constraint firstItem="Jnm-5y-LZw" firstAttribute="top" secondItem="Ga2-we-ffI" secondAttribute="topMargin" constant="20" id="cOe-53-daZ"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Twe-ZQ-gP2" secondAttribute="trailing" constant="20" id="fAP-hw-qyJ"/>
+                                                <constraint firstItem="Twe-ZQ-gP2" firstAttribute="top" secondItem="Jnm-5y-LZw" secondAttribute="bottom" constant="10" id="fML-SZ-YIh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wLN-jC-YU1" secondAttribute="trailing" constant="20" id="huv-Rj-om2"/>
+                                                <constraint firstItem="Jnm-5y-LZw" firstAttribute="leading" secondItem="Ga2-we-ffI" secondAttribute="leadingMargin" constant="20" id="vE1-Eh-VBb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="4Bq-Fh-512">
+                                        <rect key="frame" x="0.0" y="125" width="600" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Bq-Fh-512" id="JAe-vC-lGB">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-4f-RbW">
+                                                    <rect key="frame" x="28" y="59" width="348" height="32"/>
+                                                    <string key="text">Share a photo programmatically via Share API.
+Access token with publish_actions permission is required. </string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.21176470820000001" green="0.40784314269999999" blue="0.98823529480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1V-XD-qTp">
+                                                    <rect key="frame" x="537" y="24" width="35" height="30"/>
+                                                    <state key="normal" title="Try it"/>
+                                                    <connections>
+                                                        <action selector="sharePhoto" destination="q3v-ox-0Og" eventType="touchUpInside" id="hAC-y0-kfa"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wk-FH-THc">
+                                                    <rect key="frame" x="28" y="28" width="94" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.21176470820000001" green="0.40784314269999999" blue="0.98823529480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.92941176889999999" blue="0.99607843159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="2wk-FH-THc" firstAttribute="leading" secondItem="Jhb-4f-RbW" secondAttribute="leading" id="8Mn-Oo-FPO"/>
+                                                <constraint firstItem="2wk-FH-THc" firstAttribute="leading" secondItem="Jhb-4f-RbW" secondAttribute="leading" id="8QB-1j-pz8"/>
+                                                <constraint firstItem="Jhb-4f-RbW" firstAttribute="top" secondItem="2wk-FH-THc" secondAttribute="bottom" constant="10" id="WAa-xg-06j"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Jhb-4f-RbW" secondAttribute="trailing" constant="20" id="YAr-ly-QYX"/>
+                                                <constraint firstItem="2wk-FH-THc" firstAttribute="top" secondItem="JAe-vC-lGB" secondAttribute="topMargin" constant="20" id="cEs-93-xcL"/>
+                                                <constraint firstItem="2wk-FH-THc" firstAttribute="centerY" secondItem="U1V-XD-qTp" secondAttribute="centerY" id="mc6-ZE-JHg"/>
+                                                <constraint firstItem="2wk-FH-THc" firstAttribute="leading" secondItem="JAe-vC-lGB" secondAttribute="leadingMargin" constant="20" id="oWo-QB-VDe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="U1V-XD-qTp" secondAttribute="trailing" constant="20" id="vRv-KP-H6T"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="G7o-eE-chS">
+                                        <rect key="frame" x="0.0" y="250" width="600" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G7o-eE-chS" id="u3A-6U-LdL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdd-Uy-PoA">
+                                                    <rect key="frame" x="28" y="59" width="348" height="47"/>
+                                                    <string key="text">Share a video programmatically via Share API.
+Access token with publish_actions permission is required.
+</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.21176470820000001" green="0.40784314269999999" blue="0.98823529480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ic-bV-wNg">
+                                                    <rect key="frame" x="28" y="28" width="93" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.21176470820000001" green="0.40784314269999999" blue="0.98823529480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9x-Ro-cBq">
+                                                    <rect key="frame" x="537" y="24" width="35" height="30"/>
+                                                    <state key="normal" title="Try it"/>
+                                                    <connections>
+                                                        <action selector="shareVideo" destination="q3v-ox-0Og" eventType="touchUpInside" id="r0b-dY-ije"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9ic-bV-wNg" firstAttribute="leading" secondItem="u3A-6U-LdL" secondAttribute="leadingMargin" constant="20" id="39W-g5-WPD"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="rdd-Uy-PoA" secondAttribute="trailing" constant="20" id="4aK-Or-im4"/>
+                                                <constraint firstItem="9ic-bV-wNg" firstAttribute="centerY" secondItem="Z9x-Ro-cBq" secondAttribute="centerY" id="Ost-Vc-8Ir"/>
+                                                <constraint firstItem="9ic-bV-wNg" firstAttribute="top" secondItem="u3A-6U-LdL" secondAttribute="topMargin" constant="20" id="b74-Ve-D8l"/>
+                                                <constraint firstItem="rdd-Uy-PoA" firstAttribute="top" secondItem="9ic-bV-wNg" secondAttribute="bottom" constant="10" id="f4S-Lk-1oV"/>
+                                                <constraint firstItem="9ic-bV-wNg" firstAttribute="leading" secondItem="rdd-Uy-PoA" secondAttribute="leading" id="kS8-e6-2Me"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Z9x-Ro-cBq" secondAttribute="trailing" constant="20" id="toe-AX-J0h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.92941176889999999" blue="0.99607843159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ShareAPIViewController" id="s07-ck-Tgu">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="eNx-J1-J4k"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7O3-wP-Uzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="304"/>
+        </scene>
+    </scenes>
+</document>
